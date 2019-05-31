@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,11 +12,12 @@
  * @author Brandae2
  */
 public class MessagesGUI extends javax.swing.JFrame {
-
+    public Color BlabberBackground = new Color(12, 130, 186);
     private String username;
     
     public MessagesGUI() {
         initComponents();
+        getContentPane().setBackground(BlabberBackground);
     }
     public void getUsername(String _username){
         username = _username;
