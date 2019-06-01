@@ -19,12 +19,15 @@ import javax.swing.border.Border;
  * @author Brandae2
  */
 public class ContactsGUI extends javax.swing.JFrame {
+    
     public Color BlabberBackground = new Color(12, 130, 186);
     private String username;
     private ArrayList<JPanel> allContactPanels;
     private int arrayIndex;
-    private final Border border = BorderFactory.createStrokeBorder(new BasicStroke(5.0f));;
+    private final Border border = BorderFactory.createStrokeBorder(new BasicStroke(5.0f));
     
+    
+    //
     private void setAllNames(){
         usernameContact1.setText("MissMojo");
         usernameContact2.setText("xXxLegolassxXx");
@@ -33,13 +36,12 @@ public class ContactsGUI extends javax.swing.JFrame {
         usernameContact5.setText("CoffeeManiac");
         usernameContact6.setText("MyDogIsCuterThanYours");
     }
+    
+    //sets all the initial "Contacts" individual panels
     public ContactsGUI() {
         initComponents();
-        getContentPane().setBackground(BlabberBackground);
-        
-        
         setAllNames();
-        
+       getContentPane().setBackground( BlabberBackground );
         contactPanel.setBorder(border);
         contactPanel.setBackground(Color.WHITE);
         contactPanel1.setBorder(border);
@@ -52,8 +54,8 @@ public class ContactsGUI extends javax.swing.JFrame {
         contactPanel4.setBackground(Color.WHITE);
         contactPanel5.setBorder(border);
         contactPanel5.setBackground(Color.WHITE);
-        
     }
+    
     public void getUsername(String _username){
         username = _username;
         welcomeText.setText("Welcome to Blabberland, friend " + username);
@@ -68,9 +70,8 @@ public class ContactsGUI extends javax.swing.JFrame {
         allContactPanels.add(contactPanel4);
         allContactPanels.add(contactPanel5);
         arrayIndex = 6;
-        
-      
     }
+    
     public void addContact(String username){
         allContactPanels.add(contactPanel);
         arrayIndex++;
@@ -79,6 +80,7 @@ public class ContactsGUI extends javax.swing.JFrame {
                     ((JLabel) jc).setText(username);
             }
         }
+        allContactPanels.get(arrayIndex).setBorder(border);
         
     }
 
@@ -472,7 +474,9 @@ public class ContactsGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void startConversationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startConversationButtonActionPerformed
-        // TODO add your handling code here:
+        MessagesGUI newMessage = new MessagesGUI(username);
+        newMessage.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_startConversationButtonActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
