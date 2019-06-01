@@ -140,7 +140,7 @@ public class LoginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        MessagesGUI messages = new MessagesGUI();
+        ContactsGUI messages = new ContactsGUI();
         messages.getUsername(usernameField.getText().toString());
         messages.setVisible(true);
         setVisible(false);

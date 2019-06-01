@@ -167,7 +167,7 @@ public class CreateNewUserGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordField2ActionPerformed
 
     private void createLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createLoginButtonActionPerformed
-        MessagesGUI messages = new MessagesGUI();
+        ContactsGUI messages = new ContactsGUI();
         messages.getUsername(usernameField.getText().toString());
         messages.setVisible(true);
         setVisible(false);
