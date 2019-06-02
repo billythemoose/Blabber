@@ -1,12 +1,36 @@
 package main.java;
 
+import javax.swing.*;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+
+
+//Chat App
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+
 
 public class MessagesGUI extends javax.swing.JFrame
 {
     private Color BlabberBackground = new Color(12, 130, 186); 
-    private String username;
-    private String convoText;
+    private static String username;
+    private static String convoText;
+
+
+    // Chat App
+    private JFrame frm = new JFrame("Chat App");
+    private JPanel pnl = new JPanel();
+    private static String chatLog = "";
+    private static JTextArea chatTxt = new JTextArea(20,3);
+    private static JTextField msgTxt = new JTextField(20);
 
     public MessagesGUI(String _username)
     {
@@ -17,6 +41,64 @@ public class MessagesGUI extends javax.swing.JFrame
     }
 
     public MessagesGUI() { }
+
+    public static void updateView(String message)
+    {
+        //                              //
+        //// Start of Messages Thread ////
+        //                              //
+//        try
+//        {
+//            Socket socket = new Socket("localhost", 1234);
+//            System.out.println("Blabber application connected... ");
+//            msgTxt.addKeyListener(new KeyListener()
+//            {
+//                @Override
+//                public void keyTyped(KeyEvent e) {}
+//
+//                @Override
+//                public void keyReleased(KeyEvent e)
+//                {
+//                    if(e.getKeyCode() == KeyEvent.VK_ENTER)
+//                    {
+//                        String message = msgTxt.getText();
+//                        PrintWriter outStream;
+//                        try
+//                        {
+//                            outStream = new PrintWriter(socket.getOutputStream());
+//                            outStream.println(message);
+//                            outStream.flush();
+//                        }
+//                        catch(IOException e1)
+//                        {
+//                            e1.printStackTrace();
+//                        }
+//                    }
+//                }
+//
+//                @Override
+//                public void keyPressed(KeyEvent e){}
+//            });
+//
+        chatLog += message + "\n";
+        System.out.println(chatLog);
+        chatTxt.setText(chatLog);
+//
+//        convoText+="\n"+username.toUpperCase()+" says: "+userNewMessage.getText().toString();
+//        allMessages.setText(convoText);
+//        userNewMessage.setText("");
+//
+//            MessagesThread messagesThread = new MessagesThread(socket);
+//            messagesThread.start();
+//        }
+//        catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+        //                            //
+        //// End of Messages Thread ////
+        //                            //
+    }
 
     private void initComponents()
     {
@@ -118,7 +200,6 @@ public class MessagesGUI extends javax.swing.JFrame
                     .addComponent(sendMessageButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(53, 53, 53))
         );
-
         pack();
     }
 
@@ -140,7 +221,7 @@ public class MessagesGUI extends javax.swing.JFrame
         // TODO add your handling code here:
     }
 
-    private void sendMessageButtonActionPerformed(java.awt.event.ActionEvent evt)
+    public void sendMessageButtonActionPerformed(ActionEvent evt)
     {
         convoText+="\n"+username.toUpperCase()+" says: "+userNewMessage.getText().toString();
         allMessages.setText(convoText);
@@ -177,12 +258,12 @@ public class MessagesGUI extends javax.swing.JFrame
         });
     }
 
-    private javax.swing.JTextArea allMessages;
+    private static javax.swing.JTextArea allMessages;
     private javax.swing.JButton contactsButton;
     private javax.swing.JButton convosButton;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JButton sendMessageButton;
     private javax.swing.JButton settingsButton;
-    private javax.swing.JTextArea userNewMessage;
+    private static javax.swing.JTextArea userNewMessage;
 }

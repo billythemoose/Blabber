@@ -138,8 +138,10 @@ public class ContactsGUI extends javax.swing.JFrame
 
         startConversationButton.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 1, 14)); // NOI18N
         startConversationButton.setText("Start Conversation");
-        startConversationButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        startConversationButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 startConversationButtonActionPerformed(evt);
             }
         });
