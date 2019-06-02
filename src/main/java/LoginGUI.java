@@ -14,12 +14,19 @@ import java.awt.Color;
 public class LoginGUI extends javax.swing.JFrame {
 
     public Color BlabberBackground = new Color(12, 130, 186);
+    public BlabberController parentController;
     
     public LoginGUI() {
         initComponents();
         getContentPane().setBackground( BlabberBackground );
-        
     }
+
+    public LoginGUI(BlabberController blabberParent) {
+        this.parentController = blabberParent;
+        initComponents();
+        getContentPane().setBackground( BlabberBackground );
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -151,10 +158,14 @@ public class LoginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        /*
         ContactsGUI messages = new ContactsGUI();
         messages.getUsername(usernameField.getText().toString());
         messages.setVisible(true);
         setVisible(false);
+        */
+
+        this.parentController.LoginUser(this.usernameField.getText(), this.passwordField.getPassword());
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
