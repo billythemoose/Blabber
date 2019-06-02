@@ -449,10 +449,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 .addGap(18, 18, 18))
         );
 
-
-
-
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
