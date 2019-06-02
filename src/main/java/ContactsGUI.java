@@ -1,12 +1,13 @@
 package main.java;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Component;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.ArrayList;
-import javax.swing.BorderFactory;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.Border;
 
 public class ContactsGUI extends javax.swing.JFrame
@@ -16,6 +17,13 @@ public class ContactsGUI extends javax.swing.JFrame
     private ArrayList<JPanel> allContactPanels;
     private int arrayIndex;
     private final Border border = BorderFactory.createStrokeBorder(new BasicStroke(5.0f));
+
+    // Chat App
+    private JFrame frm = new JFrame("Chat App");
+    private JPanel pnl = new JPanel();
+    private JTextArea chatTxt = new JTextArea(20,3);
+    private JTextField msgTxt = new JTextField(20);
+    private String chatLog = "";
 
     private void setAllNames()
     {
@@ -466,11 +474,80 @@ public class ContactsGUI extends javax.swing.JFrame
         pack();
     }
 
+    // Start conversation button clicked and socket connection created.
+    // Passing username and socket to MessagesGUI.
     private void startConversationButtonActionPerformed(java.awt.event.ActionEvent evt)
     {
-        MessagesGUI newMessage = new MessagesGUI(username);
-        newMessage.setVisible(true);
-        setVisible(false);
+
+//            MessagesGUI newMessage = new MessagesGUI(username, socket);
+//            newMessage.setVisible(true);
+//            setVisible(false);
+        try
+        {
+            Socket socket = new Socket("localhost", 1234);
+            System.out.println("Client connected...");
+
+            // Implement GUI
+            pnl.setLayout(new BorderLayout());
+            pnl.add(new JScrollPane(chatTxt), BorderLayout.CENTER);
+
+            pnl.add(msgTxt, BorderLayout.SOUTH);
+            frm.add(pnl);
+
+            msgTxt.addKeyListener(new KeyListener(){
+
+                @Override
+                public void keyTyped(KeyEvent e) {
+
+                }
+
+                @Override
+                public void keyReleased(KeyEvent e)
+                {
+                    // Read client message from msgTxt.
+                    // Send it to server.
+                    // Using outstream of socket.
+                    if(e.getKeyCode() == KeyEvent.VK_ENTER)
+                    {
+                        String message = msgTxt.getText();
+                        PrintWriter outstream;
+                        try
+                        {
+                            outstream = new PrintWriter(socket.getOutputStream());
+                            outstream.println(message);
+                            outstream.flush();
+                        }
+                        catch(IOException e1)
+                        {
+                            e1.printStackTrace();
+                        }
+                    }
+                }
+
+                @Override
+                public void keyPressed(KeyEvent e) {
+
+                }
+            });
+
+            frm.setPreferredSize(new Dimension(200, 200));
+            frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frm.setVisible(true);
+            frm.pack();
+
+            ContactsGUIThread messagesGUIThread = new ContactsGUIThread(this, socket);
+            messagesGUIThread.start();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateView(String message)
+    {
+        chatLog += message + "\n";
+        chatTxt.setText(chatLog);
     }
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt)

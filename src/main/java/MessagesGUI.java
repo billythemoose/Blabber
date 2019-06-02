@@ -1,26 +1,37 @@
 package main.java;
 
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.net.Socket;
 
 public class MessagesGUI extends javax.swing.JFrame
 {
-    private Color BlabberBackground = new Color(12, 130, 186); 
+    private Color BlabberBackground = new Color(12, 130, 186);
     private static String username;
     private static String convoText;
+    private static Socket socket;
 
-    public MessagesGUI(String _username)
+
+    // Chat App.
+    private JTextArea chatTxt = new JTextArea(20,3);
+    private JTextField msgTxt = new JTextField(20);
+    private String chatLog = "";
+
+    public MessagesGUI(String _username, Socket socket)
     {
         initComponents();
         getContentPane().setBackground( BlabberBackground );
         username = _username;
         convoText = "";
+        this.socket = socket;
     }
 
     public MessagesGUI() { }
 
     private void initComponents()
     {
+        System.out.println("Entered init components in MessagesGUI.");
         jScrollPane1 = new javax.swing.JScrollPane();
         userNewMessage = new javax.swing.JTextArea();
         sendMessageButton = new javax.swing.JButton();
@@ -35,6 +46,9 @@ public class MessagesGUI extends javax.swing.JFrame
         userNewMessage.setColumns(20);
 
         userNewMessage.setRows(5);
+
+        // Not where text window is updated.
+        System.out.println("jScrollPanel set ViewportView");
         jScrollPane1.setViewportView(userNewMessage);
 
         sendMessageButton.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 1, 18));
@@ -43,6 +57,7 @@ public class MessagesGUI extends javax.swing.JFrame
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
+                System.out.println("Send message button clicked.");
                 sendMessageButtonActionPerformed(evt);
             }
         });
@@ -142,9 +157,10 @@ public class MessagesGUI extends javax.swing.JFrame
 
     public void sendMessageButtonActionPerformed(ActionEvent evt)
     {
-        convoText+="\n"+username.toUpperCase()+" says: "+userNewMessage.getText().toString();
+        convoText += "\n" + username.toUpperCase() + " says: " + userNewMessage.getText().toString();
         allMessages.setText(convoText);
         userNewMessage.setText("");
+
     }
 
 //    public static void main(String args[])
