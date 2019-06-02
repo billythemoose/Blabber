@@ -30,6 +30,7 @@ public class MessagesGUI extends javax.swing.JFrame
         allMessages = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Blabber Messages");
         userNewMessage.setColumns(20);
 
         userNewMessage.setRows(5);
@@ -167,7 +168,6 @@ public class MessagesGUI extends javax.swing.JFrame
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MessagesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-
         java.awt.EventQueue.invokeLater(new Runnable()
         {
             public void run()

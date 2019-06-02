@@ -129,6 +129,7 @@ public class ContactsGUI extends javax.swing.JFrame
         jToolBar1.setRollover(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Blabber Contacts");
         setBackground(new java.awt.Color(255, 255, 255));
 
         welcomeText.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 1, 22)); // NOI18N
@@ -501,7 +502,6 @@ public class ContactsGUI extends javax.swing.JFrame
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MessagesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-
         java.awt.EventQueue.invokeLater(new Runnable()
         {
             public void run()

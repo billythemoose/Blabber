@@ -27,6 +27,7 @@ public class CreateNewUserGUI extends javax.swing.JFrame
         createLoginButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Blabber Register New User");
         setPreferredSize(new java.awt.Dimension(674, 458));
 
         jLabel1.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 1, 18)); // NOI18N

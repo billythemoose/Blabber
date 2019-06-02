@@ -10,10 +10,11 @@ import java.io.PrintWriter;
 public class Server
 {
     private ServerSocket server;
-    private HashMap<Socket, PrintWriter> outStreams = new HashMap<Socket, PrintWriter>();
+    private HashMap<Socket, PrintWriter> outStreams = new HashMap<>();
 
     public Server(int port)
     {
+        int count = 1;
         try
         {
             server = new ServerSocket(port);
@@ -21,11 +22,12 @@ public class Server
             while(true)
             {
                 Socket socket = server.accept();
-                // Blabber is connected.
                 PrintWriter outStream = new PrintWriter(socket.getOutputStream());
+                System.out.println("Blabber connected to server. Instance " + count + ".");
                 outStreams.put(socket, outStream);
                 ServerThread serverThread = new ServerThread(this, socket);
                 serverThread.start();
+                count++;
             }
         }
         catch (IOException e)

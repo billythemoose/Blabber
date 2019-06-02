@@ -9,7 +9,6 @@ public class LoginGUI extends javax.swing.JFrame
     {
         initComponents();
         getContentPane().setBackground( BlabberBackground );
-        
     }
 
     @SuppressWarnings("unchecked")
@@ -25,7 +24,7 @@ public class LoginGUI extends javax.swing.JFrame
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Blabber");
+        setTitle("Blabber Login");
         setBackground(new java.awt.Color(102, 102, 255));
 
         jLabel1.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 1, 24));
@@ -173,9 +172,10 @@ public class LoginGUI extends javax.swing.JFrame
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LoginGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
 
                 new LoginGUI().setVisible(true);
             }
