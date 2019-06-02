@@ -155,6 +155,7 @@ public class ContactsGUI extends javax.swing.JFrame
             }
         });
 
+        // Contact Panel
         contactPanel.setPreferredSize(new java.awt.Dimension(265, 105));
         usernameContact1.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18));
         usernameContact1.setText("jLabel1");
@@ -176,7 +177,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 jToggleButton3ActionPerformed(evt);
             }
         });
-
         javax.swing.GroupLayout contactPanelLayout = new javax.swing.GroupLayout(contactPanel);
         contactPanel.setLayout(contactPanelLayout);
         contactPanelLayout.setHorizontalGroup(
@@ -204,6 +204,7 @@ public class ContactsGUI extends javax.swing.JFrame
                 .addGap(18, 18, 18))
         );
 
+        // Contact Panel 1
         contactPanel1.setPreferredSize(new java.awt.Dimension(265, 105));
         usernameContact2.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18));
         usernameContact2.setText("jLabel1");
@@ -218,7 +219,13 @@ public class ContactsGUI extends javax.swing.JFrame
         });
         jCheckBox2.setFont(new java.awt.Font("Lucida Grande", 0, 12));
         jCheckBox2.setText("Add to Conversation");
-
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
         javax.swing.GroupLayout contactPanel1Layout = new javax.swing.GroupLayout(contactPanel1);
         contactPanel1.setLayout(contactPanel1Layout);
         contactPanel1Layout.setHorizontalGroup(
@@ -226,11 +233,11 @@ public class ContactsGUI extends javax.swing.JFrame
             .addGroup(contactPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(contactPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jCheckBox2)
-                        .addComponent(usernameContact2))
-                    .addContainerGap(110, Short.MAX_VALUE))
+                    .addComponent(jCheckBox2)
+                    .addComponent(usernameContact2))
+                .addContainerGap(110, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contactPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
@@ -246,13 +253,16 @@ public class ContactsGUI extends javax.swing.JFrame
                 .addGap(18, 18, 18))
         );
 
+        // Contact Panel 2
         contactPanel2.setPreferredSize(new java.awt.Dimension(265, 105));
         usernameContact3.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18));
         usernameContact3.setText("jLabel1");
         jToggleButton3.setFont(new java.awt.Font("Lucida Grande", 0, 10));
         jToggleButton3.setText("Block user?");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jToggleButton3ActionPerformed(evt);
             }
         });
@@ -265,7 +275,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 jCheckBox3ActionPerformed(evt);
             }
         });
-
         javax.swing.GroupLayout contactPanel2Layout = new javax.swing.GroupLayout(contactPanel2);
         contactPanel2.setLayout(contactPanel2Layout);
         contactPanel2Layout.setHorizontalGroup(
@@ -277,7 +286,7 @@ public class ContactsGUI extends javax.swing.JFrame
                     .addComponent(usernameContact3))
                 .addContainerGap(110, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contactPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
@@ -286,13 +295,14 @@ public class ContactsGUI extends javax.swing.JFrame
             .addGroup(contactPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(usernameContact3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jCheckBox3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton3)
                 .addGap(18, 18, 18))
         );
 
+        // Contact Pane1 3
         contactPanel3.setPreferredSize(new java.awt.Dimension(265, 105));
         usernameContact4.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18));
         usernameContact4.setText("jLabel1");
@@ -305,7 +315,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 jToggleButton3ActionPerformed(evt);
             }
         });
-
         jCheckBox4.setFont(new java.awt.Font("Lucida Grande", 0, 12));
         jCheckBox4.setText("Add to Conversation");
         jCheckBox3.addActionListener(new java.awt.event.ActionListener()
@@ -315,7 +324,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 jCheckBox3ActionPerformed(evt);
             }
         });
-
         javax.swing.GroupLayout contactPanel3Layout = new javax.swing.GroupLayout(contactPanel3);
         contactPanel3.setLayout(contactPanel3Layout);
         contactPanel3Layout.setHorizontalGroup(
@@ -327,8 +335,8 @@ public class ContactsGUI extends javax.swing.JFrame
                     .addComponent(usernameContact4))
                 .addContainerGap(110, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contactPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jToggleButton4,  javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
         contactPanel3Layout.setVerticalGroup(
@@ -336,13 +344,14 @@ public class ContactsGUI extends javax.swing.JFrame
             .addGroup(contactPanel3Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(usernameContact4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jCheckBox4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton4)
                 .addGap(18, 18, 18))
         );
 
+        // Contact Pane1 4
         contactPanel4.setPreferredSize(new java.awt.Dimension(265, 105));
         usernameContact5.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18));
         usernameContact5.setText("jLabel1");
@@ -364,7 +373,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 jCheckBox3ActionPerformed(evt);
             }
         });
-
         javax.swing.GroupLayout contactPanel4Layout = new javax.swing.GroupLayout(contactPanel4);
         contactPanel4.setLayout(contactPanel4Layout);
         contactPanel4Layout.setHorizontalGroup(
@@ -372,29 +380,27 @@ public class ContactsGUI extends javax.swing.JFrame
             .addGroup(contactPanel4Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(contactPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contactPanel4Layout.createSequentialGroup()
-                        .addGap(0, 110, Short.MAX_VALUE)
-                        .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(contactPanel4Layout.createSequentialGroup()
-                    .addGroup(contactPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(usernameContact5)
-                    .addComponent(jCheckBox5))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-                    .addComponent(jToggleButton5)
-                    .addGap(35, 35, 35))
+                    .addComponent(jCheckBox5)
+                    .addComponent(usernameContact5))
+                .addContainerGap(110, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contactPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
         contactPanel4Layout.setVerticalGroup(
             contactPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contactPanel4Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(usernameContact5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jCheckBox5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton5)
                 .addGap(18, 18, 18))
         );
 
+        // Contact Pane1 5
         contactPanel5.setPreferredSize(new java.awt.Dimension(265, 105));
         usernameContact6.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18));
         usernameContact6.setText("jLabel1");
@@ -416,64 +422,37 @@ public class ContactsGUI extends javax.swing.JFrame
                 jCheckBox3ActionPerformed(evt);
             }
         });
-
         javax.swing.GroupLayout contactPanel5Layout = new javax.swing.GroupLayout(contactPanel5);
         contactPanel5.setLayout(contactPanel5Layout);
         contactPanel5Layout.setHorizontalGroup(
             contactPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contactPanel5Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(contactPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contactPanel5Layout.createSequentialGroup()
-                            .addGap(0, 110, Short.MAX_VALUE)
-                            .addComponent(usernameContact6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(contactPanel5Layout.createSequentialGroup()
+                .addGroup(contactPanel5Layout.createSequentialGroup()
+                    .addGap(24, 24, 24)
+                    .addGroup(contactPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jCheckBox6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                    .addComponent(jToggleButton6)
+                        .addComponent(usernameContact6))
+                    .addContainerGap(110, Short.MAX_VALUE))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contactPanel5Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(35, 35, 35))
-
         );
-
         contactPanel5Layout.setVerticalGroup(
             contactPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contactPanel5Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(usernameContact6)
-                .addGroup(contactPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contactPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                        .addComponent(jToggleButton6)
-                        .addContainerGap())
-                    .addGroup(contactPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox6)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jCheckBox6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton6)
+                .addGap(18, 18, 18))
         );
 
-        contactPanel.setPreferredSize(new java.awt.Dimension(265, 105));
-        usernameContact1.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18));
-        usernameContact1.setText("jLabel1");
-        jToggleButton1.setFont(new java.awt.Font("Lucida Grande", 0, 10));
-        jToggleButton1.setText("Block user?");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jToggleButton3ActionPerformed(evt);
-            }
-        });
-        jCheckBox1.setFont(new java.awt.Font("Lucida Grande", 0, 12));
-        jCheckBox1.setText("Add to Conversation");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jToggleButton3ActionPerformed(evt);
-            }
-        });
+
+
+
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -489,32 +468,30 @@ public class ContactsGUI extends javax.swing.JFrame
                     .addComponent(contactPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contactPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contactPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(0, Short.MAX_VALUE))
         );
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(contactPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contactPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(contactPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contactPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(contactPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contactPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(0, Short.MAX_VALUE))
         );
 
         scrollPane.setViewportView(jPanel1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-
 
         // Layout Horizontal
         layout.setHorizontalGroup(
@@ -534,7 +511,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
-
         // Layout Vertical
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -547,7 +523,6 @@ public class ContactsGUI extends javax.swing.JFrame
                 .addComponent(startConversationButton)
                 .addGap(0, 0, 0))
         );
-
         pack();
     }
 
