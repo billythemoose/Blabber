@@ -14,8 +14,6 @@ public class ContactsGUIThread extends Thread
     {
         this.contactsGUI = contactsGUI;
         this.socket = socket;
-
-
     }
 
     @Override
