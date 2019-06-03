@@ -129,10 +129,12 @@ public class MessagesGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void contactsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactsButtonActionPerformed
+        /*
         ContactsGUI messages = new ContactsGUI();
         messages.getUsername(username);
         messages.setVisible(true);
         setVisible(false);
+        */
     }//GEN-LAST:event_contactsButtonActionPerformed
 
     private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed

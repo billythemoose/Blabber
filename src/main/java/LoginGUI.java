@@ -169,9 +169,13 @@ public class LoginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
+        /*
         CreateNewUserGUI create = new CreateNewUserGUI();
         create.setVisible(true);
         setVisible(false);
+        */
+
+        this.parentController.InitializeNewUser();
     }//GEN-LAST:event_createAccountButtonActionPerformed
 
     /**

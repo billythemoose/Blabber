@@ -16,15 +16,16 @@ import org.jxmpp.jid.parts.Localpart;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class LoginModel {
+public class BlabberControllerModel {
 
     private XMPPTCPConnection connection;
     private XMPPTCPConnectionConfiguration config;
     private ChatManager chatManager;
+    private AccountManager accountManager;
     private Collection<RosterEntry> contacts;
 
     // Create a new Blabber XMPP connection
-    public LoginModel() {
+    public BlabberControllerModel() {
         /*
         try {
             XMPPTCPConnectionConfiguration config = XMPPTCPConnectionConfiguration
@@ -84,7 +85,7 @@ public class LoginModel {
     // Connects user to XMPP instance
     // True if user connected
     // False if failed to connect user
-    public boolean UserLogin(String username, String password) {
+    public boolean UserLogin(String username, char[] password) {
         try {
             XMPPTCPConnectionConfiguration config = XMPPTCPConnectionConfiguration
                     .builder()
@@ -92,7 +93,7 @@ public class LoginModel {
                     .setXmppDomain("blackbox")
                     .setHost("blackbox")
                     .setPort(5222)
-                    .setUsernameAndPassword(username, password)
+                    .setUsernameAndPassword(username, password.toString())
                     .build();
             connection = new XMPPTCPConnection(config);
             connection.connect();
@@ -105,13 +106,26 @@ public class LoginModel {
         return true;
     }
 
+    public boolean CreateUser(String username, char[] password) {
+        try {
+            accountManager = AccountManager.getInstance(connection);
+            accountManager.sensitiveOperationOverInsecureConnection(true);
+            accountManager.createAccount(Localpart.from(username), password.toString());
+        }
+        catch (Exception e) {
+            System.out.println(e.toString());
+            return false;
+        }
+
+        return true;
+    }
+
+
     public boolean BuildContacts() {
         try {
             Roster roster = Roster.getInstanceFor(connection);
             contacts = roster.getEntries();
-            for (RosterEntry contact : contacts) {
 
-            }
         }
         catch (Exception e) {
             System.out.println("Failed to load contacts");

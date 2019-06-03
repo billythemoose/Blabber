@@ -1,5 +1,7 @@
 
+import javax.swing.*;
 import java.awt.Color;
+import java.util.Arrays;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,8 +16,15 @@ import java.awt.Color;
 public class CreateNewUserGUI extends javax.swing.JFrame {
 
     public Color BlabberBackground = new Color(12, 130, 186);
+    public BlabberController parentController;
     
     public CreateNewUserGUI() {
+        initComponents();
+        getContentPane().setBackground(BlabberBackground);
+    }
+
+    public CreateNewUserGUI(BlabberController blabberParent) {
+        this.parentController = blabberParent;
         initComponents();
         getContentPane().setBackground(BlabberBackground);
     }
@@ -169,10 +178,19 @@ public class CreateNewUserGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordField2ActionPerformed
 
     private void createLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createLoginButtonActionPerformed
+        /*
         ContactsGUI messages = new ContactsGUI();
         messages.getUsername(usernameField.getText().toString());
         messages.setVisible(true);
         setVisible(false);
+        */
+        if (Arrays.equals(passwordField1.getPassword(), passwordField2.getPassword())) {
+            this.parentController.CreateUser(usernameField.getText(), passwordField2.getPassword());
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Passwords do not match");
+        }
+
     }//GEN-LAST:event_createLoginButtonActionPerformed
 
     /**
