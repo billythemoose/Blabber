@@ -22,52 +22,52 @@ public class BlabberController {
     }
 
     private void HideUIElements(String currentUI) {
-        if (loginGUI != null && loginGUI.isVisible() && !currentUI.contains("login")) {
-            loginGUI.setVisible(false);
+        if (this.loginGUI != null && this.loginGUI.isVisible() && !currentUI.contains("login")) {
+            this.loginGUI.setVisible(false);
         }
 
-        if (newUserGUI != null && newUserGUI.isVisible() && !currentUI.contains("newuser")) {
-            loginGUI.setVisible(false);
+        if (this.newUserGUI != null && this.newUserGUI.isVisible() && !currentUI.contains("newuser")) {
+            this.loginGUI.setVisible(false);
         }
 
-        if (contactsGUI != null && contactsGUI.isVisible() && !currentUI.contains("contacts")) {
-            contactsGUI.setVisible(false);
+        if (this.contactsGUI != null && this.contactsGUI.isVisible() && !currentUI.contains("contacts")) {
+            this.contactsGUI.setVisible(false);
         }
     }
 
     public void InitializeLogin() {
-        controllerModel = new BlabberControllerModel();
+        this.controllerModel = new BlabberControllerModel();
 
-        loginGUI = new LoginGUI(this);
-        loginGUI.setVisible(true);
+        this.loginGUI = new LoginGUI(this);
+        this.loginGUI.setVisible(true);
     }
 
     public void InitializeNewUser() {
-        if (loginGUI.isVisible()) {
-            loginGUI.setVisible(false);
+        if (this.loginGUI.isVisible()) {
+            this.loginGUI.setVisible(false);
         }
 
-        newUserGUI = new CreateNewUserGUI(this);
-        newUserGUI.setVisible(true);
+        this.newUserGUI = new CreateNewUserGUI(this);
+        this.newUserGUI.setVisible(true);
     }
 
     public void InitializeContacts() {
         HideUIElements("contacts");
-        /*
-        ContactsGUI messages = new ContactsGUI();
-        messages.getUsername(usernameField.getText().toString());
-        messages.setVisible(true);
-        setVisible(false);
-        */
-        contactsModel = new ContactsModel();
-        contactsGUI = new ContactsGUI(this);
-        contactsGUI.getUsername(this.m_username);
-        contactsGUI.setVisible(true);
+        boolean success = controllerModel.BuildContacts();
+        if (success) {
+            this.contactsGUI = new ContactsGUI(this, this.controllerModel.GetContactNames());
+        }
+        else {
+            this.contactsGUI = new ContactsGUI(this);
+        }
+
+        this.contactsGUI.getUsername(this.m_username);
+        this.contactsGUI.setVisible(true);
     }
 
     public void LoginUser(String username, char[] password) {
 
-        boolean success = controllerModel.UserLogin(username, password);
+        boolean success = this.controllerModel.UserLogin(username, password);
         if (success) {
             this.m_username = username;
             this.m_password = password;
@@ -79,7 +79,7 @@ public class BlabberController {
     }
 
     public void CreateUser(String username, char[] password) {
-        boolean success = controllerModel.CreateUser(username, password);
+        boolean success = this.controllerModel.CreateUser(username, password);
         if (success) {
             this.m_username = username;
             this.m_password = password;

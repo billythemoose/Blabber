@@ -46,6 +46,17 @@ public class ContactsGUI extends javax.swing.JFrame {
         BuildLayout();
     }
 
+    public ContactsGUI(BlabberController blabberParent, ArrayList<String> contactNames) {
+        this.parentController = blabberParent;
+        testContacts.add("nice");
+        BuildInitialComponents();
+        for(String name : contactNames) {
+            BuildContactComponent(name);
+        }
+
+        BuildLayout();
+    }
+
     public void BuildInitialComponents() {
 
         jFrame1 = new javax.swing.JFrame();

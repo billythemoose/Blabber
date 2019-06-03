@@ -1,20 +1,22 @@
 import org.jivesoftware.smack.ConnectionConfiguration;
+import org.jivesoftware.smack.SASLAuthentication;
 import org.jivesoftware.smack.chat2.Chat;
 import org.jivesoftware.smack.chat2.ChatManager;
 import org.jivesoftware.smack.chat2.IncomingChatMessageListener;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.roster.Roster;
-import org.jivesoftware.smack.roster.RosterEntries;
 import org.jivesoftware.smack.roster.RosterEntry;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
 import org.jivesoftware.smackx.iqregister.AccountManager;
+import org.jxmpp.jid.BareJid;
 import org.jxmpp.jid.EntityBareJid;
 import org.jxmpp.jid.impl.JidCreate;
 import org.jxmpp.jid.parts.Localpart;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 
 public class BlabberControllerModel {
 
@@ -23,6 +25,9 @@ public class BlabberControllerModel {
     private ChatManager chatManager;
     private AccountManager accountManager;
     private Collection<RosterEntry> contacts;
+    private ArrayList<String> contactNames;
+    private String username;
+    private String password;
 
     // Create a new Blabber XMPP connection
     public BlabberControllerModel() {
@@ -45,12 +50,25 @@ public class BlabberControllerModel {
         */
     }
 
+    public ArrayList<String> GetContactNames() {
+        return this.contactNames;
+    }
+
     // reconnect to instance
     // true if connected
     // false if failed to connect
-    public boolean ReonnectToInstance() {
+    public boolean ReconnectToInstance() {
         try {
-            connection.connect();
+            config = XMPPTCPConnectionConfiguration
+                    .builder()
+                    .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
+                    .setXmppDomain("blackbox")
+                    .setHost("blackbox")
+                    .setPort(5222)
+                    .setUsernameAndPassword(username + "@blackbox", password.toString())
+                    .build();
+            connection = new XMPPTCPConnection(config);
+            connection.connect().login();
         }
         catch (Exception e) {
             System.out.println(e.toString());
@@ -79,7 +97,7 @@ public class BlabberControllerModel {
     // True if connected
     // False if disconnected
     public boolean ConnectionStatus() {
-        return connection.isConnected();
+        return connection.isAuthenticated();
     }
 
     // Connects user to XMPP instance
@@ -87,16 +105,22 @@ public class BlabberControllerModel {
     // False if failed to connect user
     public boolean UserLogin(String username, char[] password) {
         try {
-            XMPPTCPConnectionConfiguration config = XMPPTCPConnectionConfiguration
+            this.username = username;
+            StringBuilder strBuild = new StringBuilder();
+            for (char c : password) {
+                strBuild.append(c);
+            }
+            this.password = strBuild.toString();
+            config = XMPPTCPConnectionConfiguration
                     .builder()
                     .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
                     .setXmppDomain("blackbox")
                     .setHost("blackbox")
                     .setPort(5222)
-                    .setUsernameAndPassword(username, password.toString())
+                    .setUsernameAndPassword(username, this.password)
                     .build();
             connection = new XMPPTCPConnection(config);
-            connection.connect();
+            connection.connect().login();
         }
         catch (Exception e) {
             System.out.println("Connection initialization failed");
@@ -123,9 +147,25 @@ public class BlabberControllerModel {
 
     public boolean BuildContacts() {
         try {
+            if (this.connection.isAuthenticated() == false) {
+                this.ReconnectToInstance();
+            }
             Roster roster = Roster.getInstanceFor(connection);
+            /*
+            roster.setSubscriptionMode(Roster.SubscriptionMode.accept_all);
+            roster.createGroup("Friends");
+            BareJid jid = JidCreate.bareFrom("test1");
+            roster.createEntry(jid, "test1", new String[] {"Friends"});
+            */
             contacts = roster.getEntries();
 
+            contactNames = new ArrayList<String>();
+            for(RosterEntry person : contacts) {
+                String name = person.getName();
+                if (name != null && !name.isEmpty()) {
+                    contactNames.add(name);
+                }
+            }
         }
         catch (Exception e) {
             System.out.println("Failed to load contacts");
