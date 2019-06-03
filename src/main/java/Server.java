@@ -1,3 +1,10 @@
+/**
+ * CLASS:       CS410 Software Engineering
+ * ASSIGNMENT:  Development Phase 1
+ * TEAM:        Brandae Grein, Michael Thomas, Alex Kourkoumelis, Matthew Clark, Jordi Monterrubio
+**/
+
+// Package Main.
 package main.java;
 
 import java.net.ServerSocket;
@@ -23,7 +30,7 @@ public class Server
             {
                 Socket socket = server.accept();
                 PrintWriter outStream = new PrintWriter(socket.getOutputStream());
-                System.out.println("Blabber connected to server. Instance " + count + ".");
+                System.out.println("Blabber application successfully connected to server! Instance " + count + ".");
                 outStreams.put(socket, outStream);
                 ServerThread serverThread = new ServerThread(this, socket);
                 serverThread.start();
