@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.util.ArrayList;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,18 +14,39 @@ import java.awt.Color;
  */
 public class MessagesGUI extends javax.swing.JFrame {
     private Color BlabberBackground = new Color(12, 130, 186); 
-    private String username;
+    private String usernameTo;
+    private String usernameFrom;
     private String convoText;
+    private BlabberMessageController parentController;
     /**
      * Creates new form MessagesGUI
      */
-    public MessagesGUI(String _username) {
+    public MessagesGUI(BlabberMessageController controller, String username, ArrayList<String> _username) {
+        this.parentController = controller;
+        this.usernameFrom = username;
         initComponents();
         getContentPane().setBackground( BlabberBackground );
-        username = _username;
+        StringBuilder strBuild = new StringBuilder();
+        strBuild.append(_username.get(0));
+        _username.remove(_username.get(0));
+        for(String name : _username) {
+            strBuild.append(", " + name);
+        }
+        usernameTo = strBuild.toString();
         convoText = "";
         
     }
+
+    private void SendMessage(String message) {
+        this.parentController.SendMessage(this.usernameTo, message);
+        UpdateMessages(this.usernameFrom, message);
+    }
+
+    public void UpdateMessages(String fromUser, String message) {
+        convoText += "\n" + usernameTo.toUpperCase() + " says: " + message;
+        allMessages.setText(convoText);
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -146,9 +168,12 @@ public class MessagesGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_convosButtonActionPerformed
 
     private void sendMessageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendMessageButtonActionPerformed
-        convoText+="\n"+username.toUpperCase()+" says: "+userNewMessage.getText().toString();
+        /*
+        convoText+="\n"+usernameTo.toUpperCase()+" says: "+userNewMessage.getText().toString();
         allMessages.setText(convoText);
         userNewMessage.setText("");
+        */
+        this.SendMessage(userNewMessage.getText());
     }//GEN-LAST:event_sendMessageButtonActionPerformed
 
     /**

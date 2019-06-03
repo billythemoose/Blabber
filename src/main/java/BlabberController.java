@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 public class BlabberController {
 
@@ -10,6 +10,7 @@ public class BlabberController {
     // Model components
     private ContactsModel contactsModel;
     private BlabberControllerModel controllerModel;
+    private ArrayList<BlabberMessageModel> messageModels;
 
     // Current user variables
     private String m_username;
@@ -19,6 +20,7 @@ public class BlabberController {
     // Main handler for the blabber application
     public BlabberController() {
         InitializeLogin();
+        messageModels = new ArrayList<BlabberMessageModel>();
     }
 
     private void HideUIElements(String currentUI) {
@@ -53,16 +55,25 @@ public class BlabberController {
 
     public void InitializeContacts() {
         HideUIElements("contacts");
-        boolean success = controllerModel.BuildContacts();
+        System.out.println("Fetching contact list");
+        boolean success = this.controllerModel.BuildContacts();
         if (success) {
+            System.out.println("Building contact list view");
             this.contactsGUI = new ContactsGUI(this, this.controllerModel.GetContactNames());
         }
         else {
+            System.out.println("No contacts found");
             this.contactsGUI = new ContactsGUI(this);
         }
 
+        System.out.println("Showing contacts window");
         this.contactsGUI.getUsername(this.m_username);
         this.contactsGUI.setVisible(true);
+    }
+
+    public void InitializeMessage(ArrayList<String> usernames) {
+        BlabberMessageController messageController =
+                new BlabberMessageController(this.m_username, this.m_password, usernames);
     }
 
     public void LoginUser(String username, char[] password) {

@@ -59,15 +59,7 @@ public class BlabberControllerModel {
     // false if failed to connect
     public boolean ReconnectToInstance() {
         try {
-            config = XMPPTCPConnectionConfiguration
-                    .builder()
-                    .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
-                    .setXmppDomain("blackbox")
-                    .setHost("blackbox")
-                    .setPort(5222)
-                    .setUsernameAndPassword(username + "@blackbox", password.toString())
-                    .build();
-            connection = new XMPPTCPConnection(config);
+            System.out.println("Reconnecting to instance");
             connection.connect().login();
         }
         catch (Exception e) {
@@ -147,10 +139,15 @@ public class BlabberControllerModel {
 
     public boolean BuildContacts() {
         try {
-            if (this.connection.isAuthenticated() == false) {
+            if (!this.connection.isAuthenticated() || !this.connection.isConnected()) {
                 this.ReconnectToInstance();
             }
+
             Roster roster = Roster.getInstanceFor(connection);
+            if (!roster.isLoaded()) {
+                System.out.println("Reloading the roster");
+                roster.reloadAndWait();
+            }
             /*
             roster.setSubscriptionMode(Roster.SubscriptionMode.accept_all);
             roster.createGroup("Friends");
@@ -158,7 +155,7 @@ public class BlabberControllerModel {
             roster.createEntry(jid, "test1", new String[] {"Friends"});
             */
             contacts = roster.getEntries();
-
+            System.out.println(contacts.size() + " contacts found");
             contactNames = new ArrayList<String>();
             for(RosterEntry person : contacts) {
                 String name = person.getName();
@@ -166,6 +163,8 @@ public class BlabberControllerModel {
                     contactNames.add(name);
                 }
             }
+
+            System.out.println(contactNames.size() + " contacts added to contact list");
         }
         catch (Exception e) {
             System.out.println("Failed to load contacts");
@@ -175,6 +174,7 @@ public class BlabberControllerModel {
         return true;
     }
 
+    /*
     // sends a message to a single user
     // true if successful
     // false if failed to send
@@ -198,4 +198,5 @@ public class BlabberControllerModel {
         }
         return true;
     }
+    */
 }

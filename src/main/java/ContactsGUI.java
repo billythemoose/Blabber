@@ -237,9 +237,19 @@ public class ContactsGUI extends javax.swing.JFrame {
     }
 
     private void startConversationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startConversationButtonActionPerformed
+        /*
         MessagesGUI newMessage = new MessagesGUI(username);
         newMessage.setVisible(true);
         setVisible(false);
+        */
+        ArrayList<String> usernames = new ArrayList<String>();
+        for(JPanel panel : m_contactPanels) {
+            Component[] s = panel.getComponents();
+            if (((JCheckBox)s[0]).isSelected()){
+                usernames.add(((JLabel)s[1]).getText());
+            }
+        }
+        this.parentController.InitializeMessage(usernames);
     }//GEN-LAST:event_startConversationButtonActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
