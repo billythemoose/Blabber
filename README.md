@@ -53,11 +53,11 @@ sudo apt full-upgrade
 
 ## Authors
 
-* **Mathhew Clark** - [PurpleBooth](https://github.com/everdein)
-* **Brandae Grein** - [PurpleBooth](https://github.com/BrandaeGrein)
-* **Alex Kourkoumelis** - [PurpleBooth]
-* **Jordi Monterrubio** - [PurpleBooth]
-* **Michael Thomas** - [PurpleBooth](https://github.com/billythemoose)
+* **Mathhew Clark** - [everdein](https://github.com/everdein)
+* **Brandae Grein** - [BrandaeGrein](https://github.com/BrandaeGrein)
+* **Alex Kourkoumelis** - [akourk](https://github.com/akourk)
+* **Jordi Monterrubio**
+* **Michael Thomas** - [billythemoose](https://github.com/billythemoose)
 
 ## Acknowledgments
 
