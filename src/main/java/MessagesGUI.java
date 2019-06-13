@@ -136,9 +136,13 @@ public class MessagesGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_contactsButtonActionPerformed
 
     private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed
+<<<<<<< HEAD
         SettingsGUI settings = new SettingsGUI(username);
         settings.setVisible(true);
         setVisible(false);
+=======
+        // TODO add your handling code here:
+>>>>>>> parent of b21c53c... Merge pull request #2 from billythemoose/Matthew's-Branch
     }//GEN-LAST:event_settingsButtonActionPerformed
 
     private void convosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convosButtonActionPerformed
