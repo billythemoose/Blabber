@@ -173,11 +173,12 @@ public class CreateNewUserGUI extends javax.swing.JFrame
     private void createLoginButtonActionPerformed(java.awt.event.ActionEvent evt)
     {
         if(passwordField1.getText().toString().equals(passwordField2.getText().toString())) {
-            login.createAccount(usernameField.getText().toString(), passwordField1.getText().toString());
-            ContactsGUI messages = new ContactsGUI();
-            messages.getUsername(usernameField.getText().toString());
-            messages.setVisible(true);
-            setVisible(false);
+            if (login.createAccount(usernameField.getText().toString(), passwordField1.getText().toString())) {
+                ContactsGUI messages = new ContactsGUI();
+                messages.getUsername(usernameField.getText().toString());
+                messages.setVisible(true);
+                setVisible(false);
+            }
         } else {
             usernameField.setText("Passwords do not match. Try again.");
             passwordField1.setText("");
