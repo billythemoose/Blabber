@@ -18,7 +18,10 @@ public class MessagesGUI extends javax.swing.JFrame {
     /**
      * Creates new form MessagesGUI
      */
-    public MessagesGUI(String _username) {
+    public MessagesGUI(String _username, Color color) {
+        if(color != BlabberBackground){
+           BlabberBackground = color;
+        }
         initComponents();
         getContentPane().setBackground( BlabberBackground );
         username = _username;
@@ -129,14 +132,16 @@ public class MessagesGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void contactsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactsButtonActionPerformed
-        ContactsGUI messages = new ContactsGUI();
+        ContactsGUI messages = new ContactsGUI(BlabberBackground);
         messages.getUsername(username);
         messages.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_contactsButtonActionPerformed
 
     private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed
-        // TODO add your handling code here:
+        SettingsGUI settings = new SettingsGUI(username, BlabberBackground);
+        settings.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_settingsButtonActionPerformed
 
     private void convosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convosButtonActionPerformed

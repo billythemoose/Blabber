@@ -16,6 +16,7 @@ public class LoginGUI extends javax.swing.JFrame {
     public Color BlabberBackground = new Color(12, 130, 186);
     
     public LoginGUI() {
+        
         initComponents();
         getContentPane().setBackground( BlabberBackground );
         
@@ -151,14 +152,14 @@ public class LoginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        ContactsGUI messages = new ContactsGUI();
+        ContactsGUI messages = new ContactsGUI(BlabberBackground);
         messages.getUsername(usernameField.getText().toString());
         messages.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
-        CreateNewUserGUI create = new CreateNewUserGUI();
+        CreateNewUserGUI create = new CreateNewUserGUI(BlabberBackground);
         create.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_createAccountButtonActionPerformed

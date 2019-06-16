@@ -38,10 +38,15 @@ public class ContactsGUI extends javax.swing.JFrame {
     }
     
     //sets all the initial "Contacts" individual panels
-    public ContactsGUI() {
+    public ContactsGUI(Color color) {
+        if(color != BlabberBackground){
+           BlabberBackground = color;
+        }
+        
+        getContentPane().setBackground( BlabberBackground );
+        
         initComponents();
         setAllNames();
-       getContentPane().setBackground( BlabberBackground );
         contactPanel.setBorder(border);
         contactPanel.setBackground(Color.WHITE);
         contactPanel1.setBorder(border);
@@ -474,7 +479,7 @@ public class ContactsGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void startConversationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startConversationButtonActionPerformed
-        MessagesGUI newMessage = new MessagesGUI(username);
+        MessagesGUI newMessage = new MessagesGUI(username, BlabberBackground);
         newMessage.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_startConversationButtonActionPerformed

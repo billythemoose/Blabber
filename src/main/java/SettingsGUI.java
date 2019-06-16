@@ -19,7 +19,10 @@ public class SettingsGUI extends javax.swing.JFrame {
     /**
      * Creates new form MessagesGUI
      */
-    public SettingsGUI(String _username) {
+    public SettingsGUI(String _username, Color color) {
+        if(color != BlabberBackground){
+           BlabberBackground = color;
+        }
         initComponents();
         getContentPane().setBackground( BlabberBackground );
         username = _username;
@@ -27,7 +30,7 @@ public class SettingsGUI extends javax.swing.JFrame {
         
     }
 
-   
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -108,14 +111,14 @@ public class SettingsGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void contactsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactsButtonActionPerformed
-        ContactsGUI messages = new ContactsGUI();
+        ContactsGUI messages = new ContactsGUI(BlabberBackground);
         messages.getUsername(username);
         messages.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_contactsButtonActionPerformed
 
     private void convosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convosButtonActionPerformed
-        MessagesGUI messages = new MessagesGUI(username);
+        MessagesGUI messages = new MessagesGUI(username,BlabberBackground);
         messages.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_convosButtonActionPerformed
@@ -126,7 +129,8 @@ public class SettingsGUI extends javax.swing.JFrame {
         if(userColor==null){
             userColor = (Color.WHITE);
         }
-        getContentPane().setBackground(userColor);
+        BlabberBackground = userColor;
+        getContentPane().setBackground(BlabberBackground);
     }//GEN-LAST:event_changeColorActionPerformed
 
     private void changeLanguagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeLanguagesActionPerformed

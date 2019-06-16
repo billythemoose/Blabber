@@ -15,7 +15,10 @@ public class CreateNewUserGUI extends javax.swing.JFrame {
 
     public Color BlabberBackground = new Color(12, 130, 186);
     
-    public CreateNewUserGUI() {
+    public CreateNewUserGUI(Color color) {
+        if(color != BlabberBackground){
+           BlabberBackground = color;
+        }
         initComponents();
         getContentPane().setBackground(BlabberBackground);
     }
@@ -169,7 +172,7 @@ public class CreateNewUserGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordField2ActionPerformed
 
     private void createLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createLoginButtonActionPerformed
-        ContactsGUI messages = new ContactsGUI();
+        ContactsGUI messages = new ContactsGUI(BlabberBackground);
         messages.getUsername(usernameField.getText().toString());
         messages.setVisible(true);
         setVisible(false);
