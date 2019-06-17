@@ -1,5 +1,7 @@
+package Blabber;
 
 import java.awt.Color;
+import java.net.Socket;
 import javax.swing.JColorChooser;
 
 /*
@@ -15,14 +17,16 @@ import javax.swing.JColorChooser;
 public class SettingsGUI extends javax.swing.JFrame {
     private Color BlabberBackground = new Color(12, 130, 186); 
     private String username;
+    private Socket socket;
 
     /**
      * Creates new form MessagesGUI
      */
-    public SettingsGUI(String _username, Color color) {
+    public SettingsGUI(String _username, Color color, Socket socket) {
         if(color != BlabberBackground){
            BlabberBackground = color;
         }
+        this.socket = socket;
         initComponents();
         getContentPane().setBackground( BlabberBackground );
         username = _username;
@@ -118,7 +122,7 @@ public class SettingsGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_contactsButtonActionPerformed
 
     private void convosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convosButtonActionPerformed
-        MessagesGUI messages = new MessagesGUI(username,BlabberBackground);
+        MessagesGUI messages = new MessagesGUI(username,BlabberBackground, this.socket);
         messages.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_convosButtonActionPerformed

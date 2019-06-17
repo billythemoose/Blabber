@@ -2,8 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef4a1d90-ae6d-4241-9652-db278557d8ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Blabber/CreateNewUserGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blabber/CreateNewUserGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blabber/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blabber/LogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blabber/MessagesGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blabber/MessagesGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SettingsGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blabber/SettingsGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SettingsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blabber/SettingsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/BlabberApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ContactsGUIThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Blabber/CreateNewUserGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/LoginGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/LoginGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/LoginGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/LoginGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/LoginGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/MessagesGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/MessagesGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/MessagesGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/MessagesGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/MessagesGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blabber/ServerThread.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,47 +53,47 @@
     <session id="-62196221">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
+          <entry key="java" value="15" />
           <entry key="txt" value="1" />
           <entry key="users" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="15" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1556" />
+          <entry key="java" value="1686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1556" />
+          <entry key="JAVA" value="1686" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blabber/LogIn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="272">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
-                <element signature="e#0#2207#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2257#2258#0" expanded="true" />
-                <element signature="e#2306#2307#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,22 +102,66 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blabber/ContactsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="578">
+              <caret line="48" column="34" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Blabber/CreateNewUserGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2499">
+              <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Blabber/LoginGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Blabber/MessagesGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Blabber/SettingsGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="125" column="34" lean-forward="true" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blabber/ContactsGUIThread.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>socket</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,6 +171,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/Blabber/LogIn.java" />
         <option value="$PROJECT_DIR$/src/Blabber/CreateNewUserGUI.java" />
+        <option value="$PROJECT_DIR$/src/Blabber/LoginGUI.java" />
+        <option value="$PROJECT_DIR$/src/Blabber/MessagesGUI.java" />
+        <option value="$PROJECT_DIR$/src/Blabber/SettingsGUI.java" />
       </list>
     </option>
   </component>
@@ -100,8 +184,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1123" />
-    <option name="width" value="1444" />
+    <option name="x" value="1082" />
+    <option name="width" value="1485" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -110,8 +194,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,22 +222,44 @@
             </path>
             <path>
               <item name="BlabberApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blabber" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlabberApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blabber" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlabberApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blabber" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="maven-status" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BlabberApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560629476485" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560749548252" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="Y:\Repo\CS410\Blabber\src\Blabber" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,44 +322,46 @@
       <option name="presentableId" value="Default" />
       <updated>1560624674524</updated>
       <workItem from="1560624677282" duration="4917000" />
+      <workItem from="1560746066798" duration="581000" />
+      <workItem from="1560749040625" duration="452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4917000" />
+    <option name="totallyTimeSpent" value="5950000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1123" y="0" width="1444" height="1407" extended-state="0" />
+    <frame x="1082" y="0" width="1485" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2384393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23859648" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.3299293" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3299293" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299293" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3998429" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3998429" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299293" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -356,40 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blabber/LoginGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="171" column="18" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blabber/ContactsGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blabber/CreateNewUserGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="178" column="39" lean-forward="true" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blabber/LogIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#2207#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2257#2258#0" expanded="true" />
-            <element signature="e#2306#2307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Blabber/BlabberApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -397,10 +472,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blabber/LogIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blabber/ContactsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blabber/CreateNewUserGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blabber/LoginGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Blabber/ContactsGUIThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blabber/MessagesGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blabber/SettingsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="125" column="34" lean-forward="true" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
         </state>
       </provider>
     </entry>

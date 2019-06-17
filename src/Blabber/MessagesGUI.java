@@ -154,7 +154,7 @@ public class MessagesGUI extends javax.swing.JFrame {
     }
 
     private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed
-        SettingsGUI settings = new SettingsGUI(username, BlabberBackground);
+        SettingsGUI settings = new SettingsGUI(username, BlabberBackground, this.socket);
         settings.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_settingsButtonActionPerformed
